@@ -6,16 +6,25 @@
    Case Problem 1
    
    Layout styles for Slate and Pencil Tutoring
-   Author: 
-   Date:   
+   Author: Ethan Gruenemeier
+   Date: 10.23.18
    
    Filename: sp_layout.css
 
 */
 
 /* Window and Body Styles */
+html {
+    height: 100%;
+}
 
-
+body {
+    max-width: 960px;
+    min-width: 640px;
+    width: 95%;
+    min-height: 100%;
+    margin: auto;
+}
 
 
 /* Row Styles */
@@ -53,5 +62,3 @@
 
 
 /* Footer Styles */
-
-
