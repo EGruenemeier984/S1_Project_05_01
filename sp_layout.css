@@ -14,10 +14,12 @@
 */
 
 /* Window and Body Styles */
+/* this affects the entire html document and sets the height to 100% */
 html {
     height: 100%;
 }
 
+/* This affects the body in html documnet and makes the max width 960 pixels and the min width 640 pixels. also sets the width of the contetn to 95% of the page and the minimum height is set to 100% also the page is centerd with the margins sets to auto. */
 body {
     max-width: 960px;
     min-width: 640px;
@@ -26,39 +28,124 @@ body {
     margin: auto;
 }
 
+/* This affects the header, the unorderd lists, the nav, the list items, and the anchor tags. Makes the box sizing is set to border box model. */
+header,
+ul,
+nav,
+li,
+a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /* Row Styles */
-
-
-
-
+/* This affects the row class after the floated content then clears all of the floats and sets content to an empty string so the container dosen't collapse and finally sets the display type to table. */
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
 
 /* Page Header Styles */
+/* This affects the images that are directly nested in the header and sets the display type to block. Also sets the width to 70% and floats the content to the left margin. */
+header>img {
+    display: block;
+    width: 70%;
+    float: left;
+}
 
+/* This affects the nav that is directly nested in the nav and floats the content to the left margin. Also sets left and right padding to 2% and the width is set to 30%. */
+header>nav {
+    float: left;
+    padding: 0 2% 0 2%;
+    width: 30%;
+}
 
-
-
-
+/* This affects the anchor tag in the nav element that is directly nested in the header. The display type is set to block and the width is set to 100%. */
+header>nav a {
+    display: block;
+    width: 100%;
+}
 
 /* Horizontal Navigation List Styles */
-
-
-
+/* This affects the list items in the horizontal class that is in a nav and sets the display type to block. Also sets width to a percentage and floats the content to the left margin. */
+nav.horizontal li {
+    display: block;
+    width: 12.5%;
+    float: left;
+}
 
 /* Topics Styles */
+/* This affects the list items in the topics id and sets the display type to block and the width to 20%. Also floats the content to the left and the left margin is set to 0 and the right one is set to 1.5%. */
+#topics li {
+    display: block;
+    width: 20%;
+    float: left;
+    margin-left: 0%;
+    margin-right: 1.5%;
+}
 
+/* This affects the first item in the topics id and sets the left margin to 7.75% */
+#topics li:first-child {
+    margin-left: 7.75%;
+}
 
+/* Affects the last list item in the topics id and sets the right margins to 7.75%  */
+#topics li:last-child {
+    margin-right: 7.75%;
+}
 
+/*  This affects the img directly inside the list item that is in the topics id. Sets the display type to block and the width to 50% also sets margins to auto so that the content becomes centered. */
+#topics li>img {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
 
-
-
+/* This affects the horizontal rule elements and makes it 50% of the default width */
 /* HR Styles */
-
-
-
+hr {
+    width: 50%;
+}
 
 /* Customer Comment Styles */
+/* This affects the unorded list with the id of comments and sets the width to 75% then the top and bottom margins to 40 pixels. The left and right margins are set to auto. */
+ul#comments {
+    width: 75%;
+    margin: 40px auto 40px auto;
+}
 
+/* This affects the list items in the comments id and sets the display type to block and the width to 50%. Then the content is floated to the left margin and the bottom margin is set to 30 pixels. */
+#comments li {
+    display: block;
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+}
 
+/* This affect the img theat is a direct child of the list item and that is in the comments id. Then it sets the width to 20% and floats the content to the left margin and sets the right and left margins to 5%. */
+#comments li>img {
+    width: 20%;
+    float: left;
+    margin: 0 5% 0 5%;
+}
+
+/* This affects the p tags in the comments id and sets the width to 70% plus floats content to the left margin. */
+#comments p {
+    float: left;
+    width: 70%;
+}
 
 /* Footer Styles */
+/* This affects the footer tag and clears both sides of the float */
+footer {
+    clear: both;
+}
+
+/* This affects the footer after the content and ensures that the container does not collapse  */
+footer::after {
+    clear: both;
+    content: "";
+    display: table;
+}
